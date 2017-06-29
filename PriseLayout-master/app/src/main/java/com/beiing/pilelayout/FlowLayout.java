@@ -25,6 +25,7 @@ public class FlowLayout extends ViewGroup {
 
     private boolean flag = false;//false表示右边增加，true表示左边增加
 
+    private int spWidth = 20;
     //在new的时候会调用此方法
     public FlowLayout(Context context) {
         super(context);
@@ -123,7 +124,7 @@ public class FlowLayout extends ViewGroup {
                 lineWidth = 0;
                 lineHeight = childHeight + lp.topMargin + lp.bottomMargin;
             }
-            lineWidth += childWidth + lp.leftMargin + lp.rightMargin - 20;
+            lineWidth += childWidth + lp.leftMargin + lp.rightMargin - spWidth;
             lineHeight = Math.max(lineHeight, childHeight + lp.topMargin
                     + lp.bottomMargin);
             lineViews.add(child);
@@ -164,13 +165,16 @@ public class FlowLayout extends ViewGroup {
 
                 child.layout(lc, tc, rc, bc);
 
-                left += child.getMeasuredWidth() + lp.leftMargin + lp.rightMargin - 20;
+                left += child.getMeasuredWidth() + lp.leftMargin + lp.rightMargin - spWidth;
             }
             left = getPaddingLeft();
             top += lineHeight;
         }
     }
 
+    public void setSpWidth(int spWidth) {
+        this.spWidth = spWidth;
+    }
 
     public void setFlag(boolean flag) {
         this.flag = flag;

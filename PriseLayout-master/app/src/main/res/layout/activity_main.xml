@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/zan_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点赞" />
+
+        <Button
+            android:id="@+id/cancel_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="取消点赞" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="右边增加"
+            />
+    </LinearLayout>
+
+    <com.beiing.pilelayout.FlowLayout
+        android:id="@+id/flow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.beiing.pilelayout.FlowLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/zan_layout_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点赞" />
+
+        <Button
+            android:id="@+id/cancel_layout_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="取消点赞" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="左边增加"
+            />
+    </LinearLayout>
+
+    <com.beiing.pilelayout.FlowLayout
+        android:id="@+id/flow_layout_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </com.beiing.pilelayout.FlowLayout>
+
+</LinearLayout>
